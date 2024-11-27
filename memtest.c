@@ -8,6 +8,7 @@
 #define xfree free
 #define xmalloc malloc
 #define xrealloc realloc
+
 #else
 #include "malloc.h"
 #endif
@@ -75,7 +76,7 @@ int main(int argc, char *argv[]) {
             } else {
                 new_size = rand_between(1, size);
             }
-            ptrs[ix] = realloc(ptrs[ix], new_size);
+            ptrs[ix] = xrealloc(ptrs[ix], new_size);
             if (ptrs[ix] == NULL) {
                 fprintf(stderr, "Reallocation failed\n");
                 exit(1);

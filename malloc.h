@@ -28,6 +28,6 @@ typedef struct {
 
 void * xmalloc(size_t size);
 void xfree(void * ptr);
-void *realloc(void *ptr, size_t size);
+void *xrealloc(void *ptr, size_t size);
 
 #endif

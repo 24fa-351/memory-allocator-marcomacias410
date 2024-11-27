@@ -196,7 +196,7 @@ void xfree(void *ptr) {
     }
 }
 
-void *realloc(void *ptr, size_t size) {
+void *xrealloc(void *ptr, size_t size) {
     if (!ptr) return xmalloc(size);
 
     if (size == 0) {
